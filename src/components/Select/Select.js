@@ -35,6 +35,8 @@ const NativeSelect = styled.select`
   width: 100%;
   height: 100%;
   opacity: 0;
+  /* Allow the select to span the full height in Safari */
+  -webkit-appearance: none;
 `;
 
 const PresentationalBit = styled.div`
@@ -44,12 +46,10 @@ const PresentationalBit = styled.div`
   padding: 12px 16px;
   padding-right: 52px;
   border-radius: 8px;
-
   ${NativeSelect}:focus + & {
     outline: 1px dotted #212121;
     outline: 5px auto -webkit-focus-ring-color;
   }
-
   ${NativeSelect}:hover + & {
     color: ${COLORS.black};
   }
